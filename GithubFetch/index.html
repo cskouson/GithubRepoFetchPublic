@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github API fetching thing</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="FetchGithub.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!--username entry area-->
+        <div id="username-div">
+            <label for="username">Enter Github username: </label>
+            <input type="text" id="username" name="username">
+            <button type="button" id="bt-username" onclick="getUserRepos()">Submit</button>
+        </div><hr>
+        <!--repo table-->
+        <div id="table-div">
+            <p>Average number of issues: <span id="avg-num-issues">0</span> and the repo with most issues: <span id="repo-most-issues">repo name</span></p><br>
+            <table id="repo-table">
+                <tr>
+                    <th>Repo Name</th>
+                    <th>TimeStamps: Created & Updated</th>
+                    <th>Size</th>
+                    <th>Number of Forks</th>
+                    <th>HTML Url</th>
+                    <th>List of Languages and Language Url</th>
+                    <th>Downloads Url</th>
+                    <th>Branches</th>
+                </tr>
+            </table>
+            <button type="button" id="bt-refresh" onclick="refr()">Refresh</button><br><br>
+            <select id="dropdown" name="dropdown" onchange="addEntry()">
+                <option value="empty">No Selection</option>
+            </select>
+        </div><hr>
+        <!--div for when branches buttons get clicked-->
+        <div id="branches-div"></div>
+    </body>
+</html>
