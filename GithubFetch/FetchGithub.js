@@ -1,5 +1,7 @@
 /**
- * FetchGithub.js This 
+ * FetchGithub.js
+ * 
+ * Programmer: Clint Skouson 2021
  */
 
 //global vars
